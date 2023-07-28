@@ -1,0 +1,114 @@
+1)method overloading:
+it is a scenario where a method have same name but have different parameters
+ex:
+public class A{
+public static void main(){
+B.MethodOverloading();
+B.MethodOverloading("raj");
+}
+}
+class B{
+static void MethodOverloading(){
+System.out.println("method overloading is running");
+}
+static void MethodOverloading(String name){
+System.out.println("method overloading with parameter string is running");
+}
+}
+
+2)
+types of variables:
+local variable(declared in a method and can be accessed within that method only)
+global variable(declared outside the method but in a class and can be accessed from any of the method)
+parametric variable(variables which are declared in brackets after the method declaration )
+ex:
+class A{
+int age;//----->global variable/instance variable
+void method(String name)//----->parametric variable
+{}
+void method1{
+int age2//------>local variable
+}
+}
+
+3)heap and stack
+stack is nothing but callstack where our operations/methods are called and are queued in a LIFO order
+heap is nothing but it consists of metaspace constantpool and instance pool where the memory reference will be stored when variables are declared and initialized
+
+4)constructor overloading:
+class A{
+public static void main(String[] args){
+Object object =new Object();
+Object object1=new Object("rahul");
+}
+}
+class Object{
+String name;
+public Object(){
+System.out.println("object with no parameter constructor is called");
+}
+public Object(String name){
+this.name=name;
+System.out.println("object with parameter is called");
+}
+}
+//constructor overloading is nothing but same constructor name but having different parameters
+
+5)instance method overloading:
+public class A{
+public static void main(String[] args){
+MO();
+MO(24);
+MO(26,"rahul");
+}
+static void MO(){
+system.out.println("MO is called"):
+}
+static void MO(int age){
+System.out.println("MO with age is called"):
+}
+static void MO(int age,String name){
+System.out.println("MO with age and name is called");
+}
+}
+6)
+static method and variable
+public class A{
+static int age;
+static String name;
+static void print(){
+system.out.println("print is running in class A");
+}
+public static void main(String[] args){
+print();
+age=24;
+name="raj";
+}
+}
+
+7)constructor chaining:
+class A{
+int age;
+String name;
+String location;
+A(){}
+A(int age){
+this();
+this.age=age;
+}
+A(int age,String name){
+this(age);
+this.name=name;
+}
+A(int age,String name,String location){
+this(age,name);
+this.location=location;
+}
+}
+class B{
+public static void main(String[] args){
+A a=new A();
+A a1=new A(24,"raj","bangalore");
+}
+}
+
